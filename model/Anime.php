@@ -95,7 +95,8 @@ class Anime{
     }
     public static function listarTodos(){
         $tabela = "animes2";
-        $parametros = "id, nomeanime, nomeutor, estudio, numeroepisodios, duracaopisodios, status, generos, caminho";
+        //$parametros = "id, nomeanime, nomeutor, estudio, numeroepisodios, duracaopisodios, status, generos, caminho";
+        $parametros = "caminho, duracaoepisodios, estudio, generos, nomeanime, nomeautor, duracaoepisodios, status";
         $dados = conexao::select($tabela, $parametros);
         $animes = [];
         foreach($dados as $d){
