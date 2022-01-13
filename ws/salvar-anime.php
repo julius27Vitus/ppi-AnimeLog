@@ -11,11 +11,11 @@
 
     $novoAnime = new Anime();
 
-    $novoAnime->setNomeAnime($_POST["nomeanime"]);
-    $novoAnime->setNomeAutor($_POST["nomeautor"]);
+    $novoAnime->setNomeAnime($_POST["nomeAnime"]);
+    $novoAnime->setNomeAutor($_POST["nomeAutor"]);
     $novoAnime->setEstudio($_POST["estudio"]);
-    $novoAnime->setNumeroEpisodios($_POST["numeroepisodios"]);
-    $novoAnime->setDuracaoEpisodios($_POST["duracaoepisodios"]);
+    $novoAnime->setNumeroEpisodios($_POST["numeroEpisodios"]);
+    $novoAnime->setDuracaoEpisodios($_POST["duracaoEpisodios"]);
     $novoAnime->setStatus($_POST["status"]);
     
     //enviando a imagem
