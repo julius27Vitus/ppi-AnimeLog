@@ -86,7 +86,7 @@ class Anime{
         return $this;
     }
     public function salvar(){
-        $tabela = "animes2";
+        $tabela = "anime2";
         $parametros = "caminho, duracaoepisodios, estudio, generos, nomeanime, nomeautor,  numeroepisodios,  status,  ";
         $valores = "'". $this->nomeAnime."', ". "'". $this->nomeAutor."', ". "'". $this->estudio."', "
         .$this->numeroEpisodios.", ".$this->duracaoEpisodios.", '".$this->status."', '".$this->getGenerosToBd()."','".
@@ -94,7 +94,7 @@ class Anime{
         conexao::insert($tabela, $parametros, $valores);    
     }
     public static function listarTodos(){
-        $tabela = "animes2";
+        $tabela = "anime2";
         //$parametros = "id, nomeanime, nomeutor, estudio, numeroepisodios, duracaopisodios, status, generos, caminho";
         $parametros = "caminho, duracaoepisodios, estudio, generos, nomeanime, nomeautor, duracaoepisodios, status";
         $dados = conexao::select($tabela, $parametros);
@@ -117,7 +117,7 @@ class Anime{
 
     }
     public static function getPorId($id){
-        $tabela = "animes2";
+        $tabela = "anime2";
         $parametros = "id, nomeanime, nomeautor, estudio, numeroepisodios, duracaoepisodios, status, generos, caminho";
         $dados = conexao::selectById($tabela, $parametros, $id);
        
