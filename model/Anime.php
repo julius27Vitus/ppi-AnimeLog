@@ -87,7 +87,7 @@ class Anime{
     }
     public function salvar(){
         $tabela = "animes2";
-        $parametros = "nomeAnime, nomeAutor, estudio, numeroEpisodios, duracaoEpisodios, status, generos, caminho";
+        $parametros = "caminho, duracaoepisodios, estudio, generos, nomeanime, nomeautor,  numeroepisodios,  status,  ";
         $valores = "'". $this->nomeAnime."', ". "'". $this->nomeAutor."', ". "'". $this->estudio."', "
         .$this->numeroEpisodios.", ".$this->duracaoEpisodios.", '".$this->status."', '".$this->getGenerosToBd()."','".
         $this->capa["pasta"]."'";
@@ -95,17 +95,17 @@ class Anime{
     }
     public static function listarTodos(){
         $tabela = "animes2";
-        $parametros = "id, nomeAnime, nomeAutor, estudio, numeroEpisodios, duracaoEpisodios, status, generos, caminho";
+        $parametros = "id, nomeanime, nomeutor, estudio, numeroepisodios, duracaopisodios, status, generos, caminho";
         $dados = conexao::select($tabela, $parametros);
         $animes = [];
         foreach($dados as $d){
             $a = new Anime();
             $a->id = $d["id"];
-            $a->nomeAnime = $d["nomeAnime"];
-            $a->nomeAutor = $d["nomeAutor"];
+            $a->nomeAnime = $d["nomeanime"];
+            $a->nomeAutor = $d["nomeautor"];
             $a->estudio = $d["estudio"];
-            $a->numeroEpisodios = $d["numeroEpisodios"];
-            $a->duracaoEpisodios = $d["duracaoEpisodios"];
+            $a->numeroEpisodios = $d["numeroepisodios"];
+            $a->duracaoEpisodios = $d["duracaoespisodios"];
             $a->status = $d["status"];
             $a->generos = $d["generos"];
             $a->capa["pasta"]=$d["caminho"];
@@ -117,17 +117,17 @@ class Anime{
     }
     public static function getPorId($id){
         $tabela = "animes2";
-        $parametros = "id, nomeAnime, nomeAutor, estudio, numeroEpisodios, duracaoEpisodios, status, generos, caminho";
+        $parametros = "id, nomeanime, nomeautor, estudio, numeroepisodios, duracaoepisodios, status, generos, caminho";
         $dados = conexao::selectById($tabela, $parametros, $id);
        
         foreach($dados as $d){
             $a = new Anime();
             $a->id = $d["id"];
-            $a->nomeAnime = $d["nomeAnime"];
-            $a->nomeAutor = $d["nomeAutor"];
+            $a->nomeAnime = $d["nomeanime"];
+            $a->nomeAutor = $d["nomeautor"];
             $a->estudio = $d["estudio"];
-            $a->numeroEpisodios = $d["numeroEpisodios"];
-            $a->duracaoEpisodios = $d["duracaoEpisodios"];
+            $a->numeroEpisodios = $d["numeroepisodios"];
+            $a->duracaoEpisodios = $d["duracaoepisodios"];
             $a->status = $d["status"];
             $a->generos = $d["generos"];
             $a->capa["pasta"] = "../".$d["caminho"];
