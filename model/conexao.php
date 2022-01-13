@@ -38,7 +38,7 @@ class conexao{
     private static function getConexao(){
         try{
         $conexao = new PDO(
-            "mysql:host=ec2-3-227-55-25.compute-1.amazonaws.com; port=5432; dbname=d6p0dfmpskof16",
+            "pgsql:host=ec2-3-227-55-25.compute-1.amazonaws.com; port=5432; dbname=d6p0dfmpskof16",
             "bwekwrpinvohyj",
             "f018ae5247d4a8e021d070a55a89553eb02a85fa155e54c2962c8a32dbfc5607"
         );
