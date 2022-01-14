@@ -96,6 +96,15 @@ footer ul li {
     display: inline;
 }
 
-#corpo{
-   position: static; 
+footer{
+    position: static; 
+ }
+ 
+ footer ul li a{
+     color: #28a745;
+ }
+
+ footer h4#title2 {
+    color: #f2f2f2;
+    font-size: 0.9em;
 }
