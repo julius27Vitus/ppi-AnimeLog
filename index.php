@@ -150,6 +150,12 @@ if(isset($_GET["id"])){
                 <li>Júlio Vitor |</li>
                 <li>Thomas Riandeson</li>
             </ul>
+            <h4 id="title1">Links de sites parceiros</h4>
+            <ul id="cor-list">
+                <li><a href="https://app-especiaisnba.herokuapp.com/">Especiais NBA </a>|</li>
+                <li><a href="http://ressacaliteraria.herokuapp.com/">Ressaca literária </a>|</li>
+                <li><a href="https://ppi-projeto-4bi.herokuapp.com/">Catálogo de livros</a></li>
+            </ul>
         </footer>
     </div>
     <div class="modal" tabindex="-1" id="info-modal">
