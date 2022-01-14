@@ -87,7 +87,7 @@ class Anime{
     }
     public function salvar(){
         $tabela = "anime2";
-        $parametros = "nomeAnime, nomeAutor, estudio, numeroEpisodios, duracaoEpisodios, status, generos, caminho";
+        $parametros = "nomeanime, nomeautor, estudio, numeroepisodios, duracaoepisodios, status, generos, caminho";
         $valores = "'". $this->nomeAnime."', ". "'". $this->nomeAutor."', ". "'". $this->estudio."', "
         .$this->numeroEpisodios.", ".$this->duracaoEpisodios.", '".$this->status."', '".$this->getGenerosToBd()."', '".
         $this->capa["pasta"]."'";
@@ -95,7 +95,7 @@ class Anime{
     }
     public static function listarTodos(){
         $tabela = "anime2";
-        $parametros = "id, nomeAnime, nomeAutor, estudio, numeroEpisodios, duracaoEpisodios, status, generos, caminho";
+        $parametros = "id, nomeanime, nomeautor, estudio, numeroepisodios, duracaoepisodios, status, generos, caminho";
         $dados = conexao::select($tabela, $parametros);
         $animes = [];
         foreach($dados as $d){
@@ -117,7 +117,7 @@ class Anime{
     }
     public static function getPorId($id){
         $tabela = "anime2";
-        $parametros = "id, nomeAnime, nomeAutor, estudio, numeroEpisodios, duracaoEpisodios, status, generos, caminho";
+        $parametros = "id, nomeanime, nomeautor, estudio, numeroepisodios, duracaoepisodios, status, generos, caminho";
         $dados = conexao::selectById($tabela, $parametros, $id);
        
         foreach($dados as $d){
@@ -142,8 +142,8 @@ class Anime{
     }
     public function editar(){
         $tabela = "anime2";
-        $parametros = "nomeAnime='". $this->nomeAnime."', nomeAutor='".$this->nomeAutor."', estudio='".$this->estudio.
-        "', numeroEpisodios=".$this->numeroEpisodios.", duracaoEpisodios=".$this->duracaoEpisodios.", status='"
+        $parametros = "nomeanime='". $this->nomeAnime."', nomeautor='".$this->nomeAutor."', estudio='".$this->estudio.
+        "', numeroepisodios=".$this->numeroEpisodios.", duracaoepisodios=".$this->duracaoEpisodios.", status='"
         .$this->status."', generos='".$this->getGenerosToBd()."', caminho='".$this->capa["pasta"]."'";
         conexao::update($tabela, $parametros, $this->id);    
     }
