@@ -27,7 +27,7 @@
             
             $pasta = "../arquivos/";
             $nome = uniqid();
-            $extensao = strtolower(pathinfo($_FILES["capa"]["name"],PATHINFO_EXTENSION));
+            $extensao = strtolower(pathinfo($_FILES["capa"]["name"], PATHINFO_EXTENSION));
             $caminho = $pasta . $nome .".".$extensao;
             print_r ($caminho);
             if(!$extensao == "jpeg" || !$extensao == "png"){

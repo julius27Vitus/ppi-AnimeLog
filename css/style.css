@@ -96,10 +96,6 @@ footer ul li {
     display: inline;
 }
 
-footer{
-    position: static; 
- }
- 
-footer ul li a{
-     color: #28a745;
+#corpo{
+   position: static; 
 }
