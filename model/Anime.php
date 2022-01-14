@@ -101,11 +101,11 @@ class Anime{
         foreach($dados as $d){
             $a = new Anime();
             $a->id = $d["id"];
-            $a->nomeAnime = $d["nomeAnime"];
-            $a->nomeAutor = $d["nomeAutor"];
+            $a->nomeAnime = $d["nomeanime"];
+            $a->nomeAutor = $d["nomeautor"];
             $a->estudio = $d["estudio"];
-            $a->numeroEpisodios = $d["numeroEpisodios"];
-            $a->duracaoEpisodios = $d["duracaoEpisodios"];
+            $a->numeroEpisodios = $d["numeroepisodios"];
+            $a->duracaoEpisodios = $d["duracaoepisodios"];
             $a->status = $d["status"];
             $a->generos = $d["generos"];
             $a->capa["pasta"]=$d["caminho"];
@@ -123,11 +123,11 @@ class Anime{
         foreach($dados as $d){
             $a = new Anime();
             $a->id = $d["id"];
-            $a->nomeAnime = $d["nomeAnime"];
-            $a->nomeAutor = $d["nomeAutor"];
+            $a->nomeAnime = $d["nomeanime"];
+            $a->nomeAutor = $d["nomeautor"];
             $a->estudio = $d["estudio"];
-            $a->numeroEpisodios = $d["numeroEpisodios"];
-            $a->duracaoEpisodios = $d["duracaoEpisodios"];
+            $a->numeroEpisodios = $d["numeroepisodios"];
+            $a->duracaoEpisodios = $d["duracaoepisodios"];
             $a->status = $d["status"];
             $a->generos = $d["generos"];
             $a->capa["pasta"] = "../".$d["caminho"];
